@@ -9,9 +9,9 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
 
-
 class Post extends Model
 {
+
 
     use HasFactory;
 

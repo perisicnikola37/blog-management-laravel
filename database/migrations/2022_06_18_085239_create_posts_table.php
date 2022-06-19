@@ -23,6 +23,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->date('published_at')->nullable();
 });
+
     }
 
     /**

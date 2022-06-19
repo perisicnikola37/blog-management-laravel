@@ -26,7 +26,6 @@ Route::get('/user/{id}/card', [App\Http\Controllers\UserController::class, 'show
 // Routes for DASHBOARD pages
 
 
-
 //!
 
 Route::resource('/users', 'App\Http\Controllers\UserController', [
@@ -102,7 +101,11 @@ Route::get('send-mail', function () {
 
 
 
-Route::delete('/admin/delete/media', 'App\Http\Controllers\UserController@destroy2');
 
+
+//?//?//?//?//?
 // Route for User Settings Page
 Route::get('/profile-settings', 'App\Http\Controllers\UserController@settings')->name('user.settings');
+
+Route::get('contactlist', 'App\Http\Controllers\DeleteUserController@contactlist');
+Route::post('multipleusersdelete', 'App\Http\Controllers\DeleteUserController@multipleusersdelete');

@@ -140,20 +140,6 @@ class UserController extends Controller
 
     }
 
-    public function destroy2(Request $request)
-    {
-        
-            $users = User::findOrFail($request->checkBoxArray);
-    
-            foreach ($users as $user) {
-            
-                $user->delete();
-
-            }
-    
-            return back();
-
-    }
 
     public function settings() {
 

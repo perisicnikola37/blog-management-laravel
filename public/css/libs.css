@@ -8706,6 +8706,34 @@ table.dataTable thead .sorting:after {
   width: 50%;
 }
 
+.dashboard-div-form {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 80px;
+  border-left: 1.85px solid #99A3EF;
+  border-bottom: 0.8px solid gainsboro;
+  width: 80%;
+}
+
+.dashboard-div-form table {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 80px;
+  margin-top: 20px;
+  border-left: 1.85px solid #99A3EF;
+  border-bottom: 0.8px solid gainsboro;
+  width: 70%;
+  font-size: 20px;
+}
+
+.dashboard-div-form table th {
+  padding: 5px;
+}
+
+.dashboard-div-form table td {
+  padding: 5px;
+}
+
+
+
 .dashboard-div h3 {
   padding: 20px;
 }

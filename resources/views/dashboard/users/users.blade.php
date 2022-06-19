@@ -1,8 +1,107 @@
 @extends('pages.profile_page')
 
 <x-titles.users_title></x-titles.users_title>
-
 @section('content')
+
+
+
+<div class="dashboard-div-form container">
+
+@if(session()->has('success-user-deleted'))
+<div class="alert alert-success">
+{{ session()->get('success-user-deleted') }}
+</div>
+@endif
+
+<form method="post" action="{{url('multipleusersdelete')}}">
+    {{ csrf_field() }}
+    <br>
+   
+    <table class="table-bordered table-striped" width="50%">
+        <thead>
+            
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Email</th>
+
+                @if (auth()->user()->admin == 'true' || auth()->user()->admin == 'TRUE')
+                <th class="text-center"> <input type="checkbox" id="checkAll"></th>                    
+                @endif
+
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $i=1;
+            foreach ($users as $key => $value) {
+                $name = $users[$key]->name;
+                $email = $users[$key]->email;
+                ?>
+                <tr>
+                    <td class="text-center">{{$i}}</td>
+                    <td class="text-center"><a href="{{route('users.show2', $user->id)}}">{{$name}}</a></td>
+                    <td class="text-center">{{$email}}</td>
+                    
+                    @if (auth()->user()->admin == 'true' || auth()->user()->admin == 'TRUE')
+                    <td class="text-center"><input name='id[]' type="checkbox" id="checkItem" 
+                    value="<?php echo $users[$key]->id; ?>">                        
+                    @endif
+
+
+                    </tr>
+                    <?php $i++; }?>
+                </tbody>
+            </table>
+            <br>
+            @if (auth()->user()->admin == 'true' || auth()->user()->admin == 'TRUE')
+            <input 
+            class="btn btn-success" 
+            type="submit" 
+            name="submit" 
+            value="Delete"/>              
+            @endif
+        </form>
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </script>
+    <script language="javascript">
+        $("#checkAll").click(function () {
+            $('input:checkbox').not(this).prop('checked', this.checked);
+        });
+    </script>
+
+
+
+</div>
+
+
+    
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{-- @section('content')
+
+
+
 
 <div 
 class="container" 
@@ -12,31 +111,10 @@ style="margin-top: 130px">
 
 
 
-<form action="/admin/delete/media" method="POST" class="form-inline">
-
-    {{ csrf_field() }}
-
-    {{method_field('delete')}}
-
-<div class="form-group">
-    <select name="checkBoxArray" id="" class="form-control">
-        <option value="">Delete</option>
-    </select>
-</div>
-
-<div class="form-group">
-    <input type="submit" name="delete_all" class="btn btn-primary">
-</div>
-
-</form>
-
-
-
 
     <table class="table">
         <thead>
             <tr class="text-primary" >
-                <th><input type="checkbox" id="options"></th>
                 <th style="text-align: center">ID</th>
                 <th style="text-align: center">Name</th>
                 <th style="text-align: center">Email</th>
@@ -50,7 +128,6 @@ style="margin-top: 130px">
             @foreach ($users as $user)
     
             <tr>
-                <td><input class="checkBoxes" type="checkbox" name="checkBoxArray[]" value="{{$user->id}}"></td>
                 <td style="text-align: center">{{$user->id}}</td>
                 <td style="text-align: center">
                 <a 
@@ -70,6 +147,7 @@ style="margin-top: 130px">
          
                 </td>
     
+                @if (auth()->user()->admin == 'true' || auth()->user()->admin == 'TRUE')
                 <td style="text-align: center">
                     {!! Form::open(['method' => 'DELETE', 'action' => ['App\Http\Controllers\UserController@destroy', $user->id]]) !!}
     
@@ -83,6 +161,10 @@ style="margin-top: 130px">
                     
                     {!! Form::close() !!}
                 </td>
+
+                @else
+                <td><small>No permission </small><i class="fas fa-hand-paper"></i></td>
+                @endif
     
     
             </tr>
@@ -96,36 +178,7 @@ style="margin-top: 130px">
 
     </table>
     {{$users->links('pagination::bootstrap-4')}}
-</div>
+</div> 
 
-<script>
 
-    $(document).ready(function () {
-
-        $('#options').click(function () {
-
-            if (this.checked) {
-                
-                $('.checkBoxes').each(function () {
-                    
-                    this.checked = true;
-
-                });
-
-            } else{
-
-                $('.checkBoxes').each(function () {
-                    
-                    this.checked = false;
-
-                });
-               
-            }
-
-        });
-
-    });
-
-</script>
-
-@endsection
+@endsection --}}

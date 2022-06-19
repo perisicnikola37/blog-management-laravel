@@ -56,13 +56,15 @@
 
                         <p>
 
+
+<center><p>Here will be shown Admin User's About</p></center>
 @foreach ($users as $user)
 
 @if ($user->admin == 'true' || $user->admin == 'TRUE')
 
 <center>{{$user->about}}</center>
 
-@endif
+@endif 
 
 @endforeach
 
