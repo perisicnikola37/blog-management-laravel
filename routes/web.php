@@ -20,8 +20,6 @@ Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/create-blog', [App\Http\Controllers\PostController::class, 'createblog'])->name('createblog');
 
 
-// Route for create-blog page
-Route::get('/user/{id}/card', [App\Http\Controllers\UserController::class, 'show'])->name('users.show2');
 
 // Routes for DASHBOARD pages
 
@@ -34,24 +32,12 @@ Route::resource('/users', 'App\Http\Controllers\UserController', [
       ],
 ]);
 
+
 Route::resource('/posts', 'App\Http\Controllers\PostController', [
     'names' => [
 
       ],
 ]);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Route::resource('/analytics', App\Http\Controllers\AnalyticsController::class)->middleware('is_admin');

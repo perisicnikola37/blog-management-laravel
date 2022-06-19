@@ -27,9 +27,9 @@
     </div>
 
     
-    <div class="col-sm-3">
+    <div style="width: 40%;margin-bottom: 30px">
         {!! Form::label('content', 'Content:') !!}
-    {{   Form::textarea('My text', null, ['class'      => 'form-control',
+    {{   Form::textarea('content', null, ['class' => 'form-control',
         'rows'       => 1, 
         'name'       => 'content',
         'id'         => 'myeditorinstance',
@@ -37,21 +37,13 @@
     </div>
 </div>
 
-
-    {{-- <div class="form-group" style="width: 350px">
-        {!! Form::label('content', 'Content:', ['class' => 'mb-2']) !!}
-        {!! Form::text('content', null, ['class' => 'form-control']) !!}
-    </div> --}}
-
-
+<br><br><br><br>
 
     <div class="form-group" style="width: 350px">
         {!! Form::label('picture', 'Picture:', ['class' => 'mb-2']) !!}
         {!! Form::file('picture', null, ['class' => 'form-control']) !!}
     </div>
     
-
-
 
 
         <div style="margin-top: 20px;margin-bottom: 20px">
@@ -63,19 +55,13 @@
 
            {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 
+           {!! Form::submit('Save', ['class' => 'btn btn-primary button-hover']) !!} 
         </div>
         
         {!! Form::close() !!}
+
+        
         </div>
-
-
-
-
-    {!! Form::submit('Save', ['class' => 'btn btn-primary button-hover']) !!} 
-
-
-
-
 
 
 

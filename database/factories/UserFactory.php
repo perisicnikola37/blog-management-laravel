@@ -21,8 +21,9 @@ class UserFactory extends Factory
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 
-            'picture' => 'https://source.unsplash.com/random',
-            'about' => $this->faker->sentence(35),
+            'picture' => 'avatar.png',
+            // 'picture' => 'https://source.unsplash.com/random',
+            // 'about' => $this->faker->sentence(35),
         ];
     }
 

@@ -70,7 +70,8 @@ class PostController extends Controller
   
         if(isset($user)) {
         $user->posts()->create($input);
-        session()->flash('success', 'You successfully posted your blog!');
+        session()->flash('success', '
+        Blog post successfully published!!');
         } else {
         session()->flash('failure', 'Blog posting failed!');
         }

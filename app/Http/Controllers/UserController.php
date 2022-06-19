@@ -58,7 +58,7 @@ class UserController extends Controller
     public function show($id)
     {
         
-        $user = User::findOrFail($id);
+        $user = auth()->user();
 
         return view('dashboard.users.users_card', compact(
             'user',
@@ -66,16 +66,6 @@ class UserController extends Controller
 
     }
 
-    public function showuser($id)
-    {
-        
-        $user = User::findOrFail($id);
-
-        return view('dashboard.users.users_card', compact(
-            'user',
-        ));
-
-    }
 
     /**
      * Show the form for editing the specified resource.

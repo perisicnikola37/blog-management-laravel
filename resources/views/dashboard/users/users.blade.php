@@ -40,7 +40,7 @@
                 ?>
                 <tr>
                     <td class="text-center">{{$i}}</td>
-                    <td class="text-center"><a href="{{route('users.show2', $user->id)}}">{{$name}}</a></td>
+                    <td class="text-center"><a href="">{{$name}}</a></td>
                     <td class="text-center">{{$email}}</td>
                     
                     @if (auth()->user()->admin == 'true' || auth()->user()->admin == 'TRUE')
@@ -56,7 +56,7 @@
             <br>
             @if (auth()->user()->admin == 'true' || auth()->user()->admin == 'TRUE')
             <input 
-            class="btn btn-success" 
+            class="btn btn-primary button-hover" 
             type="submit" 
             name="submit" 
             value="Delete"/>              

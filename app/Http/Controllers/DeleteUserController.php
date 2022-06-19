@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -19,14 +19,12 @@ class DeleteUserController extends Controller
 
 		$id = $request->id;
 		foreach ($id as $user) 
-		
+		{
 			User::where('id', $user)->delete();
-
+			
 		}
 
-		// Post::where('user_id ', $id)->update(['user_id'=>'1']);
-
-		session()->flash('success-user-deleted', 'Delete successfull!');
+		session()->flash('success-user-deleted', 'User deletion was successful!!');
 
 		return back();
 

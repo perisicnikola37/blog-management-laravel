@@ -1,5 +1,6 @@
 @extends('pages.profile_page')
 
+<x-titles.profile_settings_title></x-titles.profile_settings_tit>
 
 @section('content')
     
@@ -18,7 +19,7 @@
   
         {!! Form::model($user, ['method' => 'PATCH', 'action' =>    ['App\Http\Controllers\UserController@update', $user->id], 'files' => true]) !!}
  
-        <div class="col-sm-3">
+        <div class="col-sm-2">
  
         <img 
         style="border-radius: 5px 5px"
@@ -67,10 +68,20 @@
         </div>
      
  
-         <div class="col-sm-3">
+         <div class="col-sm-4">
  
             <div class="form-group">
- 
+
+                @if (auth()->user()->admin == 'true' || auth()->user()->admin == 'TRUE')
+
+                {!! Form::label('about', 'About:', ['class' => 'mb-2']) !!}
+                {{   Form::textarea('about', null, ['class'      => 'form-control',
+                    'rows'       => 1, 
+                    'name'       => 'about',
+                    'id'         => 'myeditorinstance',
+                ]) }}
+        
+                @endif
     
             </div>
 

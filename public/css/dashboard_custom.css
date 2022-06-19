@@ -430,12 +430,15 @@ footer span a:hover {
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: #fff;
-  background-color: #000;
+  background-color: black;
   text-align: center;
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+}
+
+.buttonw3 a {
+  color: #fff !important;
 }
 
 .buttonw3:hover {
