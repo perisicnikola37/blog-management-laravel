@@ -19,6 +19,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
      	<link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+        
 
         {{-- TinyMCE --}}
         <x-head.tinymce-config/>
@@ -92,9 +93,7 @@
 <span class="symbol-input100">
 <i class="fa fa-user" aria-hidden="true"></i>
             </span>
-            @error('name')
-                <span class="text-danger"> {{ $message }} </span>
-            @enderror
+       
         </div>
 
 
@@ -112,19 +111,37 @@
 <span class="symbol-input100">
 <i class="fa fa-envelope" aria-hidden="true"></i>
                 </span>
-                @error('subject')
-                    <span class="text-danger"> {{ $message }} </span>
-                @enderror
+               
             </div>
 
 
 <div class="wrap-input100 validate-input" data-validate = "Message is required">
+    
 <textarea class="input100" name="content" placeholder="Message"></textarea>
         <span class="focus-input100"></span>
-        @error('content')
-           <span class="text-danger"> {{ $message }} </span>
-         @enderror
         </div>
+
+@if (count($errors) > 0)
+
+<div id="error-div">
+@error('name')
+<span>{{$message}}</span>
+@enderror
+<br>
+@error('email')
+<span>{{$message}}</span>
+@enderror
+<br>
+@error('subject')
+<span>{{$message}}</span>
+@enderror
+<br>
+@error('content')
+<span>{{$message}}</span>
+@enderror
+</div>
+    
+@endif
 
 <div class="container-contact100-form-btn">
 <button type="submit" class="contact100-form-btn">

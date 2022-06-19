@@ -12,10 +12,11 @@
 
     <!-- Meta info -->
 
+    <!-- Meta info -->
     <meta name="author" content="Nikola Perišić">
     <!-- Website Description -->
-    <meta name="description" content="Najposjećeniji sajt za prodaju polovnih i novih automobila, motora, bicikala, kamiona, radnih mašina, poljoprivrednih mašina, plovila, kao i auto dijelova i opreme u Crnoj Gori.">
-    <meta name="keywords" content="cars bmw audi mercedes">
+    <meta name="description" content="#">
+    <meta name="keywords" content="blog nature pets sport">
 
     <!-- Website Title -->
 

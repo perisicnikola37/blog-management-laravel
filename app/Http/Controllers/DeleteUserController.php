@@ -28,7 +28,9 @@ class DeleteUserController extends Controller
 		{
 			User::where('id', $user)->delete();
 
-			Post::where('user_id', $user)->delete();
+			$auth_user = auth()->user()->id;
+
+			Post::where('user_id', $user)->update(['user_id' => $auth_user]);
 			
 		}
 

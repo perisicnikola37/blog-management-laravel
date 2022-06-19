@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>soengsouy.com</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
-	<link href='https://www.soengsouy.com/favicon.ico' rel='icon' type='image/x-icon'/>
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
 	<!--===============================================================================================-->

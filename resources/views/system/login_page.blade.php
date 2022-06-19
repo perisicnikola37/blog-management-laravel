@@ -11,11 +11,10 @@
   <meta name="theme-color" content="#fff">
 
   <!-- Meta info -->
-
   <meta name="author" content="Nikola Perišić">
   <!-- Website Description -->
-  <meta name="description" content="Najposjećeniji sajt za prodaju polovnih i novih automobila, motora, bicikala, kamiona, radnih mašina, poljoprivrednih mašina, plovila, kao i auto dijelova i opreme u Crnoj Gori.">
-  <meta name="keywords" content="cars bmw audi mercedes">
+  <meta name="description" content="#">
+  <meta name="keywords" content="blog nature pets sport">
 
   <!-- Website Title -->
 
@@ -23,7 +22,7 @@
 
   <!-- Website Avatar -->
 
-  <link rel="icon" href="img/optimized images/logo_min.png">
+  <link rel="icon" type="image/x-icon" href="https://media.istockphoto.com/photos/silhouette-of-profile-guy-in-shirt-with-white-button-in-aqua-menthe-picture-id1206439390?k=20&m=1206439390&s=170667a&w=0&h=wDX4xov95UOzjOgOkTqRurDiTepjhqAA7Q2iFofrO5c=" />
 
   <!-- Custom fonts for this template-->
   <link href="{{asset('vendor/fontawesome-free/css/all.css')}}" rel="stylesheet" type="text/css">

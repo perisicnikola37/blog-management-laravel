@@ -123,11 +123,15 @@
             <br>
 
             {!! Form::label('content', 'Content:', ['class' => 'mb-2']) !!}
+            @error('content')
+            <span style="color: red">*required</span>
+            @enderror
             {{   Form::textarea('My text', null, ['class'      => 'form-control',
                 'rows'       => 1, 
                 'name'       => 'content',
                 'id'         => 'myeditorinstance',
             ]) }}
+            
 
             <br>
     
@@ -141,9 +145,6 @@
 
             {!! Form::label('picture', 'Picture:', ['class' => 'mb-2']) !!}
             <br>
-            @error('picture')
-            <span style="color: red">*required</span>
-            @enderror
             {!! Form::file('picture', null, ['class' => 'form-control']) !!}
 
             <br><br>

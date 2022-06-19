@@ -402,3 +402,11 @@ textarea.input100 {
     opacity: 1;
   }
 }
+
+#error-div {
+  border: 0.4px solid rgba(1, 26, 215, 0.4);
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 5px;
+  color: #000;
+}
