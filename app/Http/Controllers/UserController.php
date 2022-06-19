@@ -92,9 +92,9 @@ class UserController extends Controller
 
         $input = $request->all();
 
-        $this->validate($request, [
-            'password' => 'required|confirmed|min:6',
-        ]);
+        // $this->validate($request, [
+        //     'password' => 'required|confirmed|min:6',
+        // ]);
 
         $user = Auth::user();   
         
@@ -108,11 +108,11 @@ class UserController extends Controller
 
         }
 
-        $userData = $request->only(["email"]);
+        // $userData = $request->only(["email"]);
 
-        $userData['password'] = Hash::make($userData['password']);
+        // $userData['password'] = Hash::make($userData['password']);
 
-        User::find($id)->update($userData);
+        // User::find($id)->update($userData);
 
 
 
