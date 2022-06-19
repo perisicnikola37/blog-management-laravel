@@ -81,39 +81,6 @@ class PostController extends Controller
 
     }
 
-    // public function store2(PostRequest $request)
-    // {
-        
-    //     $input = $request->all();
-
-    //     $user = Auth::user();   
-        
-    //     // if ($file = $request->file('photo_id')) {
-
-    //     //     $name = time() . $file->getClientOriginalName();
-
-    //     //     $file->move('storage/images', $name);
-
-    //     //     // $photo = Photo::create(['file' => $name]);
-
-    //     //     $photo = Photo::create(['file' => $name, 'imageable_type' => 'App\Models\Car', 'imageable_id' => $user->id]);
-
-    //     //     $input['photo_id'] = $photo->id; 
-
-    //     // }
-
-  
-    //     if(isset($user)) {
-    //     $user->posts()->create($input);
-    //     session()->flash('success', 'You successfully posted blog!');
-    //     } else {
-    //     session()->flash('failure', 'Blog posting failed!');
-    //     }
-
-    //     return back();
-
-
-    // }
 
     /**
      * Display the specified resource.

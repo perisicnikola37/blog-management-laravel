@@ -9,6 +9,8 @@ Route::auth();
 
 Route::group(['middleware' => 'is_guest'], function() {
 
+Route::resource('/analytics', App\Http\Controllers\AnalyticsController::class);
+
 // Route for profile page
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('profile-index');
 
@@ -19,6 +21,8 @@ Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logout');
 // Route for create-blog page
 Route::get('/create-blog', [App\Http\Controllers\PostController::class, 'createblog'])->name('createblog');
 
+// Route for User Settings Page
+Route::get('/profile-settings', 'App\Http\Controllers\UserController@settings')->name('user.settings');
 
 
 // Routes for DASHBOARD pages
@@ -40,7 +44,6 @@ Route::resource('/posts', 'App\Http\Controllers\PostController', [
 ]);
 
 
-Route::resource('/analytics', App\Http\Controllers\AnalyticsController::class)->middleware('is_admin');
 
 
 });
@@ -90,8 +93,5 @@ Route::get('send-mail', function () {
 
 
 //?//?//?//?//?
-// Route for User Settings Page
-Route::get('/profile-settings', 'App\Http\Controllers\UserController@settings')->name('user.settings');
-
 Route::get('contactlist', 'App\Http\Controllers\DeleteUserController@contactlist');
 Route::post('multipleusersdelete', 'App\Http\Controllers\DeleteUserController@multipleusersdelete');

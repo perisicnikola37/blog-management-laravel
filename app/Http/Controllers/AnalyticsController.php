@@ -59,7 +59,7 @@ class AnalyticsController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

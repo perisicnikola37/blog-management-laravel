@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\User;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -90,6 +92,10 @@ class UserController extends Controller
 
         $input = $request->all();
 
+        $this->validate($request, [
+            'password' => 'required|confirmed|min:6',
+        ]);
+
         $user = Auth::user();   
         
         if ($file = $request->file('picture')) {
@@ -101,6 +107,14 @@ class UserController extends Controller
             $input['picture'] = $name; 
 
         }
+
+        $userData = $request->only(["email"]);
+
+        $userData['password'] = Hash::make($userData['password']);
+
+        User::find($id)->update($userData);
+
+
 
         $user->whereId($id)->first()->update($input);
 
