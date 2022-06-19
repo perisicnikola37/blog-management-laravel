@@ -6,7 +6,7 @@ Treba dodati fajl 'avatar.png' u:
 
 Napraviti __'images'__ direktorijum unutar __'storage'__ direktorijuma
 
-## Napomena: za Factory
+## Napomena za korišćenje Factory
 
 Potrebno je zakomentarisati accessor "getPictureAttribute($file)" u modelu "User.php".
 <br>
