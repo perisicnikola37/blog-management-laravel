@@ -37,7 +37,7 @@
     <li class="nav-item">
         <a 
         class="nav-link px-lg-3 py-3 py-lg-4" 
-        href="{{route('contact-me')}}">Profile</a>
+        href="{{route('profile-index')}}">Profile</a>
     </li>
 
     <li class="nav-item">
@@ -47,5 +47,22 @@
     </li>
 
     @endif
+
+    
+  @if (Auth::check())
+
+
+
+  <li class="nav-item">
+      <a 
+      class="nav-link px-lg-3 py-3 py-lg-4" 
+      href="{{route('createblog')}}">Create Blog</a>
+  </li>
+
+
+    
+  @endif
+        
+
 
 </ul>

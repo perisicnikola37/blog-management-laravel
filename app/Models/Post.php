@@ -12,11 +12,18 @@ use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
 class Post extends Model
 {
+
     use HasFactory;
 
     // Sluggable
     use Sluggable;
     use SluggableScopeHelpers;  
+
+    protected $path = '/storage/images/';
+    
+    public function getPictureAttribute($file) {
+        return $this->path . $file;
+    }
 
     // To make sure that everything is fillable
     protected $guarded = [];
@@ -38,6 +45,8 @@ class Post extends Model
             ]
         ];
     }
+
+    
 
     
 

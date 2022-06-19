@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Clean Blog - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <title>About me | Edwin's Blog</title>
+        <link rel="icon" type="image/x-icon" href="https://media.istockphoto.com/photos/silhouette-of-profile-guy-in-shirt-with-white-button-in-aqua-menthe-picture-id1206439390?k=20&m=1206439390&s=170667a&w=0&h=wDX4xov95UOzjOgOkTqRurDiTepjhqAA7Q2iFofrO5c=" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -36,7 +36,7 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/about-bg.jpg')">
+        <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1577083144463-ee7716e5875f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
@@ -56,15 +56,25 @@
 
                         <p>
 
-                            @if ($user->admin == 'true')
+@foreach ($users as $user)
+
+@if ($user->admin == 'true' || $user->admin == 'TRUE')
+
+<center>{{$user->about}}</center>
+
+@endif
+
+@endforeach
+
+                            {{-- @if (Auth::check() && auth()->user()->admin == 'true')
 
                             {{$user->about}}
                             
                             @else
                             
-                            <center><h5>No user with Admin Permissions</h5></center>
+                            <center><h5>No user with Admin Permission</h5></center>
 
-                            @endif
+                            @endif --}}
 
                         </p>
 

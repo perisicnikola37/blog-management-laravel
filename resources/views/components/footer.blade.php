@@ -34,7 +34,14 @@
                         </a>
                     </li>
                 </ul>
-                <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2022</div>
+                
+      
+                    <div class="small text-center text-muted fst-italic mt-5">
+                        Copyright &copy; <?php echo date("Y"); ?>  
+                        All rights reserved.
+                    </div>
+           
+
             </div>
         </div>
     </div>

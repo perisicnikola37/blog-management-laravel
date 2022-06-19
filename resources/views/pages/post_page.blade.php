@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Post</title>
-        <link rel="icon" type="image/x-icon" href="{{asset('assets/favicon.ico')}}" />
+        <link rel="icon" type="image/x-icon" href="https://media.istockphoto.com/photos/silhouette-of-profile-guy-in-shirt-with-white-button-in-aqua-menthe-picture-id1206439390?k=20&m=1206439390&s=170667a&w=0&h=wDX4xov95UOzjOgOkTqRurDiTepjhqAA7Q2iFofrO5c=" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -37,7 +37,16 @@
         </nav>
         <!-- Page Header-->
 
-        <header class="masthead" style="background-image: url({{$post->picture}})">
+
+        
+
+        <header 
+        class="masthead" 
+        style="background-image: url({{$post->picture}})">
+        
+   
+        
+
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">

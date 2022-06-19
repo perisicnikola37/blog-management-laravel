@@ -35,6 +35,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
+  
 
 </head>
 
@@ -83,6 +84,8 @@
                 @enderror
                 </div>
 
+               
+
               </div>
         
               
@@ -112,6 +115,13 @@
                   {{ __('Register') }}
               </button>
       
+     
+                <center style="margin: 20px">
+                  <div>
+                    {!! NoCaptcha::renderJs('en', false, 'onloadCallback') !!}
+                    {!! NoCaptcha::display() !!}            
+                  </div>
+                </center>
 
                 <hr>
                 <a href="#" class="btn btn-google btn-user btn-block">
@@ -128,6 +138,8 @@
               <div class="text-center">
                 <a class="small" href="/login">Already have an account? Log In!</a>
               </div>
+
+              
             </div>
           </div>
         </div>

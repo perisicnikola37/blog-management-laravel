@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Edwin's Blog</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="https://media.istockphoto.com/photos/silhouette-of-profile-guy-in-shirt-with-white-button-in-aqua-menthe-picture-id1206439390?k=20&m=1206439390&s=170667a&w=0&h=wDX4xov95UOzjOgOkTqRurDiTepjhqAA7Q2iFofrO5c=" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -36,7 +36,9 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/<h5>No user with Admin Permissions</h5>-bg.jpg')">
+        <header 
+        class="masthead" 
+        style="background-image: url({{'assets/img/home-bg.jpg'}})">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
@@ -56,42 +58,65 @@
     
                        
                    
-                    @foreach ($posts as $post)
+                    <center>
 
-                    <!-- Post preview-->
-                    <div class="post-preview">
+                        @if (count($posts) > 0)
 
-                        <a href="{{route('post-index', $post->slug)}}">
-                            <h2 class="post-title">Title: {{$post->title}}</h2>
-                        </a>
+                        @foreach ($posts as $post)
 
-                        <h3 class="post-subtitle">Description: {{$post->short_description}}</h3>
+                          <!-- Post preview-->
+                          <div class="post-preview">
+      
+                              <a href="{{route('post-index', $post->slug)}}">
+                                  <h6 class="post-title">Title: {{$post->title}}</h6>
+                              </a>
+      
+                              <h5 class="post-subtitle">Description: {{$post->short_description}}</h5>
+      
+                              <p class="post-meta">
+                                  Posted by
+                                  <a href="#" class="text-danger">{{$post->user->name}}</a>
+                              </p>
+      
+                              <a href="{{route('post-index', $post->id)}}">
+                                  
+                              <img 
+                              width="250"
+                              src="{{$post->picture}}" 
+                              alt="">
+      
+                              </a>
+      
+                          </div>
+                          <!-- Divider-->
+                          <hr class="my-4" />
 
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#" class="text-danger">{{$post->user->name}}</a>
-                        </p>
+                        @endforeach
 
-                        <a href="{{route('post-index', $post->id)}}">
-                            
+                        @else 
+
+                        <h5>There are no blog posts right now...</h5>
+                        <br>
                         <img 
-                        height="120"
-                        src="{{$post->picture}}" 
-                        alt="">
+                        height="150" 
+                        src="assets/img/unique.gif"
+                        alt="GIF"
+                        title="GIF">
+                        <br>
+                        <br>
+                            
+                        @endif
 
-                        </a>
-
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-
-                    @endforeach
+                    </center>
              
                     
 
-                    <div class="pagination">
-                        {{$posts->links('pagination::bootstrap-4')}}
-                    </div>
+                  
+                
+                        {{$posts->links('pagination::bootstrap-5')}}
+                 
+                 
+             
                    
             </div>
         </div>

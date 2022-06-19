@@ -6,6 +6,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "anhskohbo/no-captcha": "^3.4",
+        "biscolab/laravel-recaptcha": "^5.4",
         "cviebrock/eloquent-sluggable": "^9.0",
         "fakerphp/faker": "^1.19",
         "guzzlehttp/guzzle": "^7.2",
@@ -13,7 +15,10 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^3.4",
-        "laravelcollective/html": "^6.3"
+        "laravelcollective/html": "^6.3",
+        "symfony/http-client": "^6.1",
+        "symfony/mailgun-mailer": "^6.1",
+        "tinymce/tinymce": "^6.0"
     },
     "require-dev": {
         "laravel/sail": "^1.0.1",

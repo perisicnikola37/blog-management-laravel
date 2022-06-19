@@ -240,7 +240,8 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #0085A1;
+  color: rgba(1, 26, 215, 0.4);
+  transition: 0.4s;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -2961,22 +2962,19 @@ textarea.form-control-lg {
 
 .btn {
   display: inline-block;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 800;
-  line-height: 1.5;
-  color: #212529;
+  font-weight: 400;
   text-align: center;
+  white-space: nowrap;
   vertical-align: middle;
-  cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background-color: transparent;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   border: 1px solid transparent;
-  padding: 1rem 1.75rem;
-  font-size: 0.875rem;
-  border-radius: 0;
+  padding: 0.4rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2996,15 +2994,23 @@ textarea.form-control-lg {
   opacity: 0.65;
 }
 
-.btn-primary {
+/* .btn-primary {
   color: #fff;
   background-color: #0085A1;
   border-color: #0085A1;
-}
-.btn-primary:hover {
+} */
+
+.btn-primary {
   color: #fff;
-  background-color: #007189;
-  border-color: #006a81;
+  background-color: #000;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  transition: 0.5s;
+  color: #fff;
+  background-color: rgba(1, 26, 215, 0.4);
+  border-color: rgba(1, 26, 215, 0.4);
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -4691,7 +4697,7 @@ textarea.form-control-lg {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #0085A1;
+  background-color: rgba(1, 26, 215, 0.4);
   border-color: #0085A1;
 }
 .page-item.disabled .page-link {
@@ -11245,4 +11251,38 @@ header.masthead .site-heading .h1 {
   .post-preview > a > .post-title {
     font-size: 2.25rem;
   }
+}
+
+
+/* Custom CSS */
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(1, 26, 215, 0.4);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 50%;
+}
+
+.sessionsuccess {
+  padding: 0.4rem;
+  margin-top: 20px;
+  background-color:  rgba(1, 26, 215, 0.4);
+}
+
+.sessiondanger {
+  margin-top: 20px;
+  background-color:  rgba(1, 26, 215, 0.4);
 }

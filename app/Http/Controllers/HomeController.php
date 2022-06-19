@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\User;
 
+
 class HomeController extends Controller
 {
     /**
@@ -51,12 +52,31 @@ class HomeController extends Controller
 
     public function about() {
 
-        $user = User::find(1);
+        $users = User::all();
 
         return view('pages.about_page', compact(
+            'users',
+        ));
+
+    }
+
+    public function profile() {
+
+        $users = User::count();
+
+        $posts = Post::count();
+
+        $user = auth()->user();
+
+        return view('layouts.includes.profile_page_content_section', compact(
+            'users',
+            'posts',
             'user',
         ));
 
     }
+
+  
+  
 
 }
