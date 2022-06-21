@@ -85,7 +85,16 @@
                 
                 
 <br><br>
-@yield('pagination')
+
+
+@yield('pagination') 
+
+
+
+
+
+
+
 @yield('scripts')
 
 

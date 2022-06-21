@@ -45,6 +45,10 @@
     </div>
     
 
+    {!! Form::submit('Save', ['class' => 'btn btn-primary button-hover']) !!} 
+
+
+    {!! Form::close() !!}
 
         <div style="margin-top: 20px;margin-bottom: 20px">
             {!! Form::open(['method' => 'DELETE', 'action' => ['App\Http\Controllers\PostController@destroy', $post->id]]) !!}
@@ -55,18 +59,14 @@
 
            {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 
-           {!! Form::submit('Save', ['class' => 'btn btn-primary button-hover']) !!} 
+  
         </div>
         
         {!! Form::close() !!}
 
-        
         </div>
 
-
-
-
-    {!! Form::close() !!}
+      
 
 
     

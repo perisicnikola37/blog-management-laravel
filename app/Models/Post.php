@@ -25,6 +25,7 @@ class Post extends Model
         return $this->path . $file;
     }
 
+
     // To make sure that everything is fillable
     protected $guarded = [];
 

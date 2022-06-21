@@ -80,14 +80,29 @@
                                   <a href="#" class="text-danger">{{$post->user->name}}</a>
                               </p>
       
-                              <a href="{{route('post-index', $post->id)}}">
+                              {{-- <a href="{{route('post-index', $post->id)}}"> --}}
                                   
+                              {{-- <img 
+                              width="250"
+                              src="{{$post->random}}" 
+                              alt=""> --}}
+                              
                               <img 
                               width="250"
                               src="{{$post->picture}}" 
                               alt="">
+                                  
+                              <img 
+                              width="250"
+                              src="{{$post->random}}" 
+                              alt="">
+
       
-                              </a>
+                              {{-- </a> --}}
+
+                          
+
+                              
       
                           </div>
                           <!-- Divider-->

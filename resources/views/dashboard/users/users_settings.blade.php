@@ -24,7 +24,19 @@
         <img 
         style="border-radius: 5px 5px"
         height="150"
-        src="{{$user->picture ? $user->picture : 'https://thumbs.dreamstime.com/b/    no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg'}}" alt="">
+
+        @if ($user->picture == '/storage/images/no-picture')
+
+        src="{{$user->random}}"
+
+        @else 
+
+        src="{{$user->picture}}"
+            
+        @endif
+
+        alt="Picture not set yet"
+        title="Picture not set yet">
  
 
 

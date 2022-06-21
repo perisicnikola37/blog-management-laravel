@@ -8,6 +8,7 @@ use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Requests\PostRequest;
+use App\Models\User;
 
 class PostController extends Controller
 {
@@ -64,6 +65,14 @@ class PostController extends Controller
             $file->move('storage/images', $name);
 
             $input['picture'] = $name; 
+
+            $input['random'] = 'no-picture';
+
+        } else {
+
+            $input['picture'] = 'no-picture';
+
+            $input['random'] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUnvISVTYopMAy17o3mB2lfSPeEjoKfAdV2w&usqp=CAU";
 
         }
 
@@ -169,6 +178,8 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
 
         $post->delete();
+
+        session()->flash('delete-post', 'The post has been successfully deleted...');
 
         return redirect('/posts');
 

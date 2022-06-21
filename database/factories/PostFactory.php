@@ -24,8 +24,9 @@ class PostFactory extends Factory
             'slug' => $this->faker->name(),
             'short_description' => Str::random(10),
             'content' => $this->faker->sentence(300),
-            'picture' => 'https://source.unsplash.com/random',
-            'user_id' => $number++
+            'picture' => 'no-picture',
+            'user_id' => $number++,
+            'random' => 'https://source.unsplash.com/random',
         ];
     }
 

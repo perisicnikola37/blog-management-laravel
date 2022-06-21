@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Mail;
 
 Route::auth();
 
-
 Route::group(['middleware' => 'is_guest'], function() {
 
 Route::resource('/analytics', App\Http\Controllers\AnalyticsController::class);
@@ -25,8 +24,8 @@ Route::get('/create-blog', [App\Http\Controllers\PostController::class, 'createb
 Route::get('/profile-settings', 'App\Http\Controllers\UserController@settings')->name('user.settings');
 
 
-// Routes for DASHBOARD pages
 
+// Routes for DASHBOARD pages
 
 //!
 
@@ -44,13 +43,7 @@ Route::resource('/posts', 'App\Http\Controllers\PostController', [
 ]);
 
 
-
-
 });
-
-
-
-
 
 
 
@@ -75,23 +68,19 @@ Route::get('/email', [App\Http\Controllers\EmailController::class, 'create']);
 Route::post('/email', [App\Http\Controllers\EmailController::class, 'sendEmail'])->name('send.email');
 
 
-Route::get('send-mail', function () {
+// Route::get('send-mail', function () {
    
-    $details = [
-        'title' => 'Mail from ItSolutionStuff.com',
-        'body' => 'This is for testing email using smtp'
-    ];
+//     $details = [
+//         'title' => 'Mail from ItSolutionStuff.com',
+//         'body' => 'This is for testing email using smtp'
+//     ];
    
-    Mail::to('5dzoni5@gmail.com')->send(new \App\Mail\MyTestMail($details));
+//     Mail::to('5dzoni5@gmail.com')->send(new \App\Mail\MyTestMail($details));
    
-    dd("Email is Sent.");
-});
+//     dd("Email is Sent.");
+// });
 
 
-
-
-
-
-//?//?//?//?//?
 Route::get('contactlist', 'App\Http\Controllers\DeleteUserController@contactlist');
+
 Route::post('multipleusersdelete', 'App\Http\Controllers\DeleteUserController@multipleusersdelete');

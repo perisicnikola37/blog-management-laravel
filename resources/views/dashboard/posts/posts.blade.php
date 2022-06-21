@@ -13,9 +13,13 @@ class="alert alert-success">
 @endif
 
 
-
-
-
+@if(session()->has('delete-post'))
+<div 
+style="margin-top: 30px;"
+class="alert alert-danger">
+{{ session()->get('delete-post') }}
+</div>
+@endif
 
 
 @if (auth()->user()->admin == 'true' || auth()->user()->admin == 'TRUE')
@@ -37,13 +41,26 @@ class="alert alert-success">
                           <div class="color-block-text">
                                {{$post->short_description}}
                           </div>
+            
                           <img 
-                          style="border-radius: 10px;margin-top: 5px"
-                          height="140"
-                          width="110"
-                          src="{{$post->picture}}" 
-                          alt="Not Available"
-                          title="Not available">
+            style="border-radius: 10px;margin-top: 5px"
+            height="140"
+            width="100"
+            
+            @if ($post->picture == '/storage/images/no-picture')
+
+            src="{{$post->random}}" 
+                
+
+            @else 
+
+            src="{{$post->picture}}" 
+
+            @endif
+
+            alt="Not Available"
+            title="Not Available">
+        
                       </div>
                       
               <div class="color-block-bottom">
@@ -90,13 +107,26 @@ class="alert alert-success">
             <div class="color-block-text">
                  {{$post->short_description}}
             </div>
+
             <img 
             style="border-radius: 10px;margin-top: 5px"
             height="140"
-            width="110"
+            width="100"
+            
+            @if ($post->picture == '/storage/images/no-picture')
+
+            src="{{$post->random}}" 
+                
+
+            @else 
+
             src="{{$post->picture}}" 
+
+            @endif
+
             alt="Not Available"
-            title="Not available">
+            title="Not Available">
+          
         </div>
         
 <div class="color-block-bottom">
@@ -135,50 +165,16 @@ class="btn btn-primary2">Edit this post
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @endsection
+
+
 
 
 @section('pagination')
 
 <div class="row">
     <center>{{$posts->links('pagination::bootstrap-4')}}</center>
-</div>
+</div> 
     
 @endsection
+

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('picture')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->date('published_at')->nullable();
+            $table->string('random')->nullable();
 });
 
     }

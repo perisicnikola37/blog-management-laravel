@@ -18,9 +18,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password')->nullable();
-            $table->string('picture')->nullable()->default('avatar.png');
+            $table->string('picture')->nullable()->default('no-picture');
             $table->text('about')->nullable();
             $table->string('admin')->nullable()->default('false');
+            $table->string('random')->nullable()->default('/images/avatar.png');
         });
     }
 
