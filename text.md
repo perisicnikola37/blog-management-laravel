@@ -1,13 +1,9 @@
-# Kako bi svaki user imao svoju default avatar sliku potrebno je uraditi sledeće:
+# Potrebno je dodati sledeću u ".env" fajlu zbog konfiguracije mail-a i reCAPTCH-e
 
-Treba dodati fajl 'avatar.png' u: 
+MAIL_MAILER=mailgun
+MAILGUN_DOMAIN=sandboxa0575477a07c4d46bc474dfd7d104316.mailgun.org
+MAILGUN_SECRET=6fb8c8fdbd262ef08ff062388c8cb9f4-02fa25a3-ff2ddce5
 
-## public/storage/images/avatar.png
+NOCAPTCHA_SECRET=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+NOCAPTCHA_SITEKEY=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
 
-Napraviti __'images'__ direktorijum unutar __'storage'__ direktorijuma
-
-## Napomena za korišćenje Factory
-
-Potrebno je zakomentarisati accessor "getPictureAttribute($file)" u modelu "User.php".
-<br>
-ln16. - ln22.
