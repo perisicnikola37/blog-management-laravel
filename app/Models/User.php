@@ -9,9 +9,13 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\HasApiTokens;
 
+use Kyslik\ColumnSortable\Sortable;
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    use Sortable;
 
     protected $path = '/storage/images/';
 
@@ -20,6 +24,8 @@ class User extends Authenticatable
         return $this->path . $file;
 
     }
+
+    public $sortable = ['id', 'name', 'email'];
 
     // public function getPasswordAttribute($password) {
     //     bcrypt($password);

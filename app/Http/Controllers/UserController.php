@@ -12,10 +12,9 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
 
@@ -60,8 +59,8 @@ class UserController extends Controller
     public function show($id)
     {
         
-        $user = auth()->user();
-
+        $user = User::findOrFail($id);
+        
         return view('dashboard.users.users_card', compact(
             'user',
         ));
@@ -92,7 +91,8 @@ class UserController extends Controller
 
         $input = $request->all();
 
-        // $this->validate($request, [
+        // $this->validate($request, 
+        // [
         //     'password' => 'required|confirmed|min:6',
         // ]);
 
@@ -106,20 +106,19 @@ class UserController extends Controller
 
             $input['picture'] = $name; 
 
+            $input['random'] = 'no-picture';
+
         }
 
-        // $userData = $request->only(["email"]);
-
-        // $userData['password'] = Hash::make($userData['password']);
-
-        // User::find($id)->update($userData);
-
-
+        if ($request->password) {
+            $input['password'] = bcrypt($request->password);
+        } else {
+            $input['password'] = auth()->user()->password;
+        }
 
         $user->whereId($id)->first()->update($input);
 
         session()->flash('success-profile', 'You successfully updated your profile!');
-
 
         return back();
 
@@ -154,6 +153,7 @@ class UserController extends Controller
         ));
 
     }
+
     
           
 

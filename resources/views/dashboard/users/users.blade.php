@@ -21,9 +21,9 @@
         <thead>
             
             <tr>
-                <th class="text-center">ID</th>
-                <th class="text-center">Name</th>
-                <th class="text-center">Email</th>
+                <th class="text-center" width="80px">@sortablelink('id')</th>
+                <th class="text-center">@sortablelink('name')</th>
+                <th class="text-center">@sortablelink('email')</th>
 
                 @if (auth()->user()->admin == 'true' || auth()->user()->admin == 'TRUE')
                 <th class="text-center"> <input type="checkbox" id="checkAll"></th>                    
@@ -35,11 +35,12 @@
             <?php
             $i=1;
             foreach ($users as $key => $value) {
+                $id = $users[$key]->id;
                 $name = $users[$key]->name;
                 $email = $users[$key]->email;
                 ?>
                 <tr>
-                    <td class="text-center">{{$i}}</td>
+                    <td class="text-center">{{$id}}</td>
                     <td class="text-center"><a href="">{{$name}}</a></td>
                     <td class="text-center">{{$email}}</td>
                     

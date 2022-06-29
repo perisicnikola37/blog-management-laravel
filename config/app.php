@@ -182,6 +182,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+        Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
 
         /*
          * Package Service Providers...

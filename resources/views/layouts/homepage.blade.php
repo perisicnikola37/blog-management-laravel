@@ -48,7 +48,11 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
                             <h1>Edwin's Blog</h1>
-                            <span class="subheading">A Blog Theme by Edwin Diaz</span>
+                            <span>Test Account with Admin permissions:</span>
+                            <br>
+                            <span>email: test@gmail.com</span>
+                            <br>
+                            <span>password: 12345678</span>
                         </div>
                     </div>
                 </div>
