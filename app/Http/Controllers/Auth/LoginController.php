@@ -42,4 +42,8 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
 
     }
+
+    protected $maxAttempts = 3;
+    protected $decayMinutes = 1;
+    
 }

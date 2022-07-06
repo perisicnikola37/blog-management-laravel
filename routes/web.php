@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
@@ -62,7 +63,6 @@ Route::get('/about-me', [App\Http\Controllers\HomeController::class, 'about'])->
 // Route for post page
 Route::get('/post/{slug}', [App\Http\Controllers\HomePageController::class, 'show'])->name('post-index');
 
-
 // Routes for contact page email
 Route::get('/email', [App\Http\Controllers\EmailController::class, 'create']);
 Route::post('/email', [App\Http\Controllers\EmailController::class, 'sendEmail'])->name('send.email');
@@ -84,3 +84,5 @@ Route::post('/email', [App\Http\Controllers\EmailController::class, 'sendEmail']
 Route::get('contactlist', 'App\Http\Controllers\DeleteUserController@contactlist');
 
 Route::post('multipleusersdelete', 'App\Http\Controllers\DeleteUserController@multipleusersdelete');
+
+Route::get('/info/{id}', [UserController::class, 'show'])->name('custom.show');

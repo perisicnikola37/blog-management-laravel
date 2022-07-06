@@ -41,7 +41,7 @@
                 ?>
                 <tr>
                     <td class="text-center">{{$id}}</td>
-                    <td class="text-center"><a href="">{{$name}}</a></td>
+                    <td class="text-center"><a href="{{route('custom.show', $user)}}">{{$name}}</a></td>
                     <td class="text-center">{{$email}}</td>
                     
                     @if (auth()->user()->admin == 'true' || auth()->user()->admin == 'TRUE')
