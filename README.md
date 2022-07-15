@@ -90,6 +90,7 @@ After running the above commands, you should be able to access the application a
 * Added CSRF protection
 * Added Middleware protection for unregistered users 
 * Added session messages
+* Added Factories for users and blog posts
 
 
 
