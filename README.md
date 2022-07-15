@@ -1,19 +1,19 @@
 # Edwin's Blog - Blog Project | Laravel 9  <img height="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" />
 
 >This project was made with a deadline of two days. I used the already provided frontend template, where I added everything necessary to the database, created relations between the tables, and did the backend in Laravel 9. 
-In this project is also available a management system (CMS) for blog posts. More information is below..
+This project also available a management system (CMS) for blog posts. More information is below...
 
 ![schooldash-dahboard-page](https://i.postimg.cc/02qSGXJp/homepage.pnghttps://i.postimg.cc/02qSGXJp/homepage.png)
 ![schooldash-dahboard-page](https://i.postimg.cc/CxTcq4wt/screencapture-edwins-blog-herokuapp-register-2022-07-15-21-54-13.png)
 ![schooldash-dahboard-page](https://i.postimg.cc/ZYLbgwMP/login.png)
 
 ## Requirements 
-* Php 8.0 and above
+* PHP 8.0 and above
 * Composer 
 * Since this project is running Laravel 9, I suggest checking out the official requirements
 
 ## Installation
-* Clone the repository by running the following command in your comamand line below (Or you can dowload zip file from GitHub)
+* Clone the repository by running the following command in your command line below (Or you can download the zip file from GitHub)
 ```shell
 git clone https://github.com/dzonidevv/cortex.git
  ```
@@ -21,7 +21,7 @@ git clone https://github.com/dzonidevv/cortex.git
 ```shell
 cd cortex-master
  ```
-* Install/Update Composer dependancies
+* Install/Update Composer dependencies
 ```shell
 composer install 
 ```
@@ -30,7 +30,7 @@ composer install
 ```shell
 cp .env.example .env
 ```
-* Generate encryption key
+* Generate an encryption key
 ```shell
 php artisan key:generate
 ```
@@ -46,60 +46,55 @@ php artisan migrate
         php artisan db:seed
         ```
         
-* For development or testing purposes, you can use the Laravel built in server by running 
+* For development or testing purposes, you can use the Laravel built-in server by running 
 ```shell
 php artisan serve
 ```
 
-After running the above commands, you should be able to access the application at http::/localhost or your designated domain name depending on configuration.
+After running the above commands, you should be able to access the application at http::/localhost or your designated domain name depending on the configuration.
 
 ## Setup
 * Log in to the application with the following credentials
     * Email: test@gmail.com
     * Password: 12345678
     
-* if you are on production 
-    - When you log in, you would be redirected to a page with error message at the top right corner that says "Please set your school of operation first". At the menu, click on create schools
-    - On the page to create schools, provide a name, address and initial for your school and click on create school
-    - Click on view schools, select the current school and click on the button set scvhool
-    - You can now head over to the dashboard
-    - You can begin to add classes, students, teachers etc. Some operations would not work specifically all links under the academics section
-    - Head over to academic years, create a new academic year and a new semester then set the academic year and semester 
-* if you are on dev or testing, data is preset to test and use the application.
+* Project Workflow
+    - When you log in, you would be redirected to a Homepage
+    - On this page, you can create a blog post, enter your profile settings, logout and many more
+    - Click on Profile to enter your Profile settings
+    - In the CMS you can manage all of your blog posts, or if you are an administrator, you can manage all blog posts on the platform and users also
+    - As an administrator, you are able to view platform analytics
+    - As an administrator, you can also delete a certain user or all users by selecting
+    - Inside your profile settings you can edit your name, email address, picture, password, and many more
+    - As an administrator, you have a special field called `about` where you can write something about yourself which will be displayed on the About Page within the platform
+* There are two roles: 
+- `administrator` and `subscriber`
 
-## Usage
-* Add class groups to the school
-* Add classes to class groups
-* Add sections to classes
-* Add students to sections (You must have created a class and a section before you can add students)
-* Add teachers to school
-* Add subjects to school
+## Roles
+
+### Administrator
+* Ability to create, edit, view, and delete all blog posts on the platform
+* Ability to create, edit, view, and delete all users on the platform
+* Can view analytics page
+* Can manage the information which will be displayed within about page
+
+### Subscriber
+* Ability to create, edit, view, and delete their blog posts
+* Can view all users on the platform but can't delete them
 
 ## Features
-### Super Admin
-By default super admin can manage all activities in each school, some super admin exclusive features are
-* Ability to create, edit and delete schools
-" Ability to set school of operation
+* When an administrator deletes someone's post, that post automatically relates to that administrator
+* Used Laravel Sluggable for SEO
+* Used reCAPTCHA while logging 
+* Added e-mail contact with Mailgun
+* Added CSRF protection
+* Added Middleware protection for unregistered users 
+* Added session messages
 
-### Admin
-* Ability to manage own school settings
-* Ability to create, edit, view and delete class groups in assigned school
-* Ability to create, edit, view and delete classes 
-* Ability to create, edit, view and delete sections
-* Ability to create, edit, view and delete classes
-* Ability to create, edit, view and delete subjects
-* Ability to create, edit, view and delete academic years
-* Ability to set Academic years
-* Ability to admit students, view student profiles, edit student profile, print student profile and delete student
-* Ability to create teachers, edit teacher profile and delete teacher
-* Ability to create, edit, manage, view and delete timetables
-* Ability to create, edit, view and delete sylabii
-* Ability to create, edit, view and delete semester
-* Ability to set own school academic year and semester
 
-### Teachers
-* Ability to create, edit, view and delete sylabii
-* Ability to create, edit, manage, view and delete timetables
+
+
+
 
 
 
