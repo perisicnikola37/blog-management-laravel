@@ -91,9 +91,12 @@ After running the above commands, you should be able to access the application a
 * Added CSRF protection
 * Added Middleware protection for unregistered users 
 * Added session messages
-* Added Factories for users and blog posts
+* Added Factories for users and blog posts using <i>faker</i>
 * Every user has a default picture
+* Used Chart.js
+* Added pagination on homepae
 * Added TinyMCE as HTML editor
+* Users have CMS ( Management System )
 
 ## 🚀 Tech used
 
