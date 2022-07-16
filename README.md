@@ -91,8 +91,14 @@ After running the above commands, you should be able to access the application a
 * Added Middleware protection for unregistered users 
 * Added session messages
 * Added Factories for users and blog posts
+* Every user has a default picture
 
+## 🚀 Tech used
 
+* PHP v.8
+* Laravel v.9
+* MySQL
+* HTML v.5 / CSS v.3 / Bootstrap v.5
 
 
 
