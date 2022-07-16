@@ -92,6 +92,7 @@ After running the above commands, you should be able to access the application a
 * Added session messages
 * Added Factories for users and blog posts
 * Every user has a default picture
+* Added TinyMCE as HTML editor
 
 ## 🚀 Tech used
 
@@ -99,6 +100,7 @@ After running the above commands, you should be able to access the application a
 * Laravel v.9
 * MySQL
 * HTML v.5 / CSS v.3 / Bootstrap v.5
+* JavaScript 
 
 
 
