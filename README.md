@@ -79,6 +79,7 @@ After running the above commands, you should be able to access the application a
 * Can manage the information which will be displayed within about page
 
 ### Subscriber
+* Ability view all blog posts on the platform
 * Ability to create, edit, view, and delete their blog posts
 * Can view all users on the platform but can't delete them
 
