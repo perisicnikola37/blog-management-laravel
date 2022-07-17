@@ -97,6 +97,7 @@ After running the above commands, you should be able to access the application a
 * Added pagination on homepae
 * Added TinyMCE as HTML editor
 * Users have CMS ( Management System )
+* Forms Validation
 
 ## 🚀 Tech used
 
