@@ -86,7 +86,7 @@ After running the above commands, you should be able to access the application a
 ## Features
 * When an administrator deletes someone's post, that post automatically relates to that administrator
 * Used Laravel Sluggable for SEO
-* Used reCAPTCHA while logging 
+* Added reCAPTCHA on registration
 * Added e-mail contact with Mailgun
 * Added CSRF protection
 * Added Middleware protection for unregistered users 
