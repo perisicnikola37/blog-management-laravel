@@ -26,10 +26,20 @@
                     <li class="list-inline-item">
                         <a 
                         target="_blank"
-                        href="https://github.com/dzonidevv">
+                        href="https://github.com/perisicnikola37">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a 
+                        target="_blank"
+                        href="https://www.linkedin.com/in/perisicnikola37/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>

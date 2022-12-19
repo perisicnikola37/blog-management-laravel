@@ -24,10 +24,7 @@ class EmailController extends Controller
         $data = [
           'name' => $request->name,
           'email' => $request->email,
-          // 'email' => '5dzoni5@gmail.com',
           'subject' => $request->subject,
-
-          // 'email' => $request->email,
           'content' => $request->content
         ];
 

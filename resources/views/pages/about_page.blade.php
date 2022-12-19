@@ -53,31 +53,15 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-
                         <p>
 
+<center><p>Here will be shown admin user's about</p></center>
 
-<center><p>Here will be shown Admin User's About</p></center>
 @foreach ($users as $user)
-
 @if ($user->admin == 'true' || $user->admin == 'TRUE')
-
 <center>{{$user->about}}</center>
-
 @endif 
-
 @endforeach
-
-                            {{-- @if (Auth::check() && auth()->user()->admin == 'true')
-
-                            {{$user->about}}
-                            
-                            @else
-                            
-                            <center><h5>No user with Admin Permission</h5></center>
-
-                            @endif --}}
-
                         </p>
 
                     </div>
