@@ -15,7 +15,7 @@
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^3.0.1",
         "laravel/tinker": "^2.7",
-        "laravel/ui": "^3.4",
+        "laravel/ui": "^4.1",
         "laravelcollective/html": "^6.3",
         "symfony/http-client": "^6.1",
         "symfony/mailgun-mailer": "^6.1",
