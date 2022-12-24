@@ -16,9 +16,7 @@ class HomePageController extends Controller
 
     public function index()
     {
-
-        
-
+        //
     }
 
     /**

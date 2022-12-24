@@ -48,11 +48,11 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
                             <h1>Edwin's Blog</h1>
-                            <span>Test Account with Admin permissions:</span>
+                            <span>Test account with admin permissions:</span>
                             <br>
-                            <span>email: test@gmail.com</span>
+                            <span>email: admin@gmail.com</span>
                             <br>
-                            <span>password: 12345678</span>
+                            <span>password: password</span>
                         </div>
                     </div>
                 </div>

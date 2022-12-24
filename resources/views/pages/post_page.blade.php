@@ -37,29 +37,13 @@
         </nav>
         <!-- Page Header-->
 
-
-        
-
         <header 
         class="masthead" 
-        style="background-image: url(
-            
-            
-           @if($post->picture != null)
-
+        style="background-image: url(@if($post->picture != null)
            {{$post->picture}}    
-
            @else
-
            {{$post->random}}
-
-           @endif
-            
-            
-            
-            )">
-        
-
+           @endif)">
    
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -68,9 +52,7 @@
                             <h1>{{$post->title}}</h1>
                             <h2 class="subheading">{{$post->short_description}}</h2>
                             <span class="meta">
-                                Posted by
-                                <a href="#!">{{$post->user->name}}</a>
-                                
+                                Posted by {{$post->user->name}}
                             </span>
                         </div>
                     </div>

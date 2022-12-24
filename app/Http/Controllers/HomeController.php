@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Post;
 use App\Models\User;
-
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -28,45 +28,34 @@ class HomeController extends Controller
 
     public function index()
     {
-
-        $posts = Post::paginate(4);
+        $posts = Post::latest('id')->paginate(4);
 
         return view('layouts.homepage', compact(
             'posts',
         ));
-        
     }
 
     // This function returns /homepage on / - url
     public function redirect() {
-        
         return redirect('/homepage');
-
     }
 
     public function contact() {
-
         return view('pages.contact_page');
-
     }
 
     public function about() {
-
         $users = User::all();
 
         return view('pages.about_page', compact(
             'users',
         ));
-
     }
 
     public function profile() {
-
         $users = User::count();
-
         $posts = Post::count();
-
-        $user = auth()->user();
+        $user = Auth::user();
 
         return view('layouts.includes.profile_page_content_section', compact(
             'users',
@@ -75,8 +64,4 @@ class HomeController extends Controller
         ));
 
     }
-
-  
-  
-
 }

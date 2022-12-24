@@ -21,7 +21,6 @@ class PostController extends Controller
     {
 
         $posts = Post::paginate(8);
-
         $auth_user = auth()->user();
 
         // For Profile Card
@@ -73,7 +72,7 @@ class PostController extends Controller
         session()->flash('failure', 'Blog posting failed!');
         }
 
-        return to_route('homepage');
+        return to_route('homepage')->withFragment('#blog-published');
     }
 
 
@@ -102,13 +101,11 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-
         $post = Post::findBySlug($id);
 
         return view('dashboard.posts.posts_edit', compact(
             'post',
         ));
-
     }
 
     /**
@@ -120,15 +117,11 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $input = $request->all();
     
         if ($file = $request->file('picture')) {
-            
             $name = time() . $file->getClientOriginalName();
-
             $file->move('storage/images', $name);
-
             $input['picture'] = $name;
 
         }
@@ -139,17 +132,9 @@ class PostController extends Controller
             auth()->user()->posts()->whereId($id)->first()->update($input);
         }
 
-       
-
         session()->flash('success-edit', 'You successfully edited this blog!');
             
         return redirect()->route('posts.index');
-
-       
-
- 
-        
-
     }
 
     /**
@@ -160,22 +145,16 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        
         $post = Post::findOrFail($id);
-
         $post->delete();
-
         session()->flash('delete-post', 'The post has been successfully deleted...');
 
         return redirect('/posts');
-
     }
 
     
     public function createblog() {
-
         return view('pages.create_blog');
-        
     }
 
 

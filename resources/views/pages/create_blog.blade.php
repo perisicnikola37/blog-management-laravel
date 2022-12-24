@@ -45,7 +45,7 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
                             <h1>Edwin's Blog</h1>
-                            <span class="subheading">A Blog Theme by Edwin Diaz</span>
+                            <span class="subheading">by <a href="https://github.com/perisicnikola37" target="_blank">Nikola Perišić</a></span>
                         </div>
                     </div>
                 </div>
