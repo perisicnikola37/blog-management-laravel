@@ -15,15 +15,15 @@ This project also available a management system (CMS) for blog posts. More infor
 ## Installation
 * Clone the repository by running the following command in your command line below (Or you can download the zip file from GitHub)
 ```shell
-git clone https://github.com/perisicnikola37/cortex.git
+git clone https://github.com/perisicnikola37/blog-management-laravel.git
  ```
 * Head to the projects directory
 ```shell
-cd cortex-master
+cd blog-management-laravel
  ```
 * Install/Update Composer dependencies
 ```shell
-composer install 
+composer install | composer update
 ```
 
 * Copy .env.example file into .env file and configure based on your environment
