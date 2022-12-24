@@ -56,51 +56,6 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
 
-    
-                           {{-- Session messages for posting blog --}}
-
-    <div class="container">
-
-        @if (Session::has('success'))
-    
-        <div class="sessionsuccess">
-            <center>{{session('success')}}</center> 
-        </div> 
-    
-        @endif
-       
-       </div>
-
-       <div class="container sessiondanger">
-   
-           @if (Session::has('failure'))
-       
-           <div
-           class="alert">
-               {{session('failure')}}    
-           </div> 
-       
-           @endif
-          
-          </div>
-
-
-
-       
-
-   {{-- <form action="create-blog2" method="post" enctype="multipart/form-data"> 
-    
-    <label for="">Title</label>
- <input type="text" name="title">
-
- <button type="submit" value="submit">Save</button>
-</form> --}}
-
-
-
-    {{-- Form --}}
-
-
  <div class="container"> 
 
 <center>
@@ -131,7 +86,6 @@
                 'name'       => 'content',
                 'id'         => 'myeditorinstance',
             ]) }}
-            
 
             <br>
     
@@ -160,26 +114,15 @@
             <div class="form-group" style="margin-top: 20px">
                 {!! Form::submit('Post', ['class' => 'btn btn-primary button-hover']) !!}
             </div> 
-            
-    
 
             {!! Form::close() !!}
         </div>
-
-          
-                    
-
-                  
-                
-             
                    
             </div>
         </div>
         <br>      <br> 
         <!-- Footer-->
         <x-footer></x-footer>
-
-      
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

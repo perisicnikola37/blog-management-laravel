@@ -53,41 +53,27 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
-        
         $input = $request->all();
-
         $user = Auth::user();   
         
         if ($file = $request->file('picture')) {
-
             $name = time() . $file->getClientOriginalName();
-
             $file->move('storage/images', $name);
-
             $input['picture'] = $name; 
-
             $input['random'] = 'no-picture';
-
         } else {
-
             $input['picture'] = 'no-picture';
-
             $input['random'] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUnvISVTYopMAy17o3mB2lfSPeEjoKfAdV2w&usqp=CAU";
-
         }
-
   
         if(isset($user)) {
         $user->posts()->create($input);
-        session()->flash('success', '
-        Blog post successfully published!!');
+        session()->flash('success', 'Blog post successfully published!!');
         } else {
         session()->flash('failure', 'Blog posting failed!');
         }
 
-        return back();
-
-
+        return to_route('homepage');
     }
 
 

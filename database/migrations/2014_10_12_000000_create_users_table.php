@@ -26,11 +26,10 @@ return new class extends Migration
             $table->string('random')->nullable()->default('/images/avatar.png');
         });
 
-
         DB::table('users')->insert([
-            'name' => 'Test User',
-            'email' => 'test@gmail.com',
-            'password' => Hash::make('12345678'),
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('password'),
             'admin' => 'true',
             'picture' => 'no-picture',
             'random' => '/images/avatar.png',

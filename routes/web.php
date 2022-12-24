@@ -3,7 +3,9 @@
 use App\Http\Controllers\AnalyticsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DeleteUserController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;

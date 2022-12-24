@@ -4,7 +4,7 @@
 This project also available a management system (CMS) for blog posts. More information is below...
 
 ![schooldash-dahboard-page](https://i.postimg.cc/02qSGXJp/homepage.pnghttps://i.postimg.cc/02qSGXJp/homepage.png)
-![schooldash-dahboard-page](https://i.postimg.cc/CxTcq4wt/screencapture-edwins-blog-herokuapp-register-2022-07-15-21-54-13.png)
+![schooldash-dahboard-page](https://i.postimg.cc/PJcwR1cf/screencapture-127-0-0-1-8000-register-2022-12-24-11-50-41.png)
 ![schooldash-dahboard-page](https://i.postimg.cc/ZYLbgwMP/login.png)
 
 ## Requirements 
@@ -15,7 +15,7 @@ This project also available a management system (CMS) for blog posts. More infor
 ## Installation
 * Clone the repository by running the following command in your command line below (Or you can download the zip file from GitHub)
 ```shell
-git clone https://github.com/dzonidevv/cortex.git
+git clone https://github.com/perisicnikola37/cortex.git
  ```
 * Head to the projects directory
 ```shell
@@ -55,8 +55,8 @@ After running the above commands, you should be able to access the application a
 
 ## Setup
 * Log in to the application with the following credentials
-    * Email: test@gmail.com
-    * Password: 12345678
+    * Email: admin@gmail.com
+    * Password: password
     
 * Project Workflow
     - When you log in, you would be redirected to a Homepage
@@ -82,7 +82,6 @@ After running the above commands, you should be able to access the application a
 * Ability view all blog posts on the platform
 * Ability to create, edit, view, and delete their blog posts
 * Can view all users on the platform but can't delete them
-
 ## Features
 * When an administrator deletes someone's post, that post automatically relates to that administrator
 * Used Laravel Sluggable for SEO
@@ -100,7 +99,6 @@ After running the above commands, you should be able to access the application a
 * Forms Validation
 
 ## 🚀 Tech used
-
 * PHP v.8
 * Laravel v.9
 * MySQL
