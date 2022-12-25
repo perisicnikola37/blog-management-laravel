@@ -70,6 +70,11 @@ After running the above commands, you should be able to access the application a
 * There are two roles: 
 - `administrator` and `subscriber`
 
+#### Possible errors: 
+-> "cURL error 60: SSL certificate problem: unable to get local issuer certificate"
+<br>
+[Watch video](https://www.youtube.com/watch?v=f5jQqWvw44U&ab_channel=Errors%26Solution)
+
 ## Roles
 
 ### Administrator
